@@ -44,9 +44,9 @@ class Reservation
         if (isset($_POST["checkout_date"])) {
             $this->checkOutDate = $_POST["checkout_date"];
         }
-        $this->kid = isset($_POST["kid"]) && $_POST["kid"] == "1";
-        $this->ac = isset($_POST["ac"]) && $_POST["ac"] == "1";
-        $this->pet = isset($_POST["pet"]) && $_POST["pet"] == "1";
+        $this->kid = isset($_POST["kid"]) && $_POST["kid"] == "on";
+        $this->ac = isset($_POST["ac"]) && $_POST["ac"] == "on";
+        $this->pet = isset($_POST["pet"]) && $_POST["pet"] == "on";
         if (!empty($_POST["notes"])) {
             $this->notes = $_POST["notes"];
         }

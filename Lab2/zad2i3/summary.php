@@ -6,7 +6,13 @@
     </div>
     <hr>
     <h2>Dane gości</h2>
+    <?php
+    if ($data->guestCount > 1) {   
+    ?>   
     <div class="guest-data">
+    <?php  
+    }
+    ?>
         <h2>Gość 1</h2>
         <div class="elem-group">
             <p><?php echo $data->name; ?> <?php echo $data->surname; ?></p>
@@ -14,21 +20,26 @@
         <div class="elem-group">
             <p><?php echo $data->email; ?> <?php echo $data->phone; ?></p>
         </div>
-        <hr>
     <?php
     if ($data->guestCount > 1) {
         for ($i = 1; $i < $data->guestCount; $i++) {
         ?>   
+            <hr>
             <div class="elem-group">
                 <h2>Gość <?php echo $i + 1; ?></h2>
                 <p><?php echo $guests[$i]->name; ?> <?php echo $guests[$i]->surname; ?></p>
             </div>
-            <hr>
         <?php
         }
     }
     ?>
+    <?php
+    if ($data->guestCount > 1) {   
+    ?>  
     </div>
+    <?php  
+    }
+    ?>
     <hr>
     <div class="elem-group inlined">
         <h2>Data zameldowania</h2>
