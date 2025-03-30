@@ -46,16 +46,6 @@
                 }
                 ?>
             </div>
-            <div class="elem-group">
-                <label for="guest_email_<?php echo $i; ?>">Adres e-mail</label>
-                <input type="email" name="guest_email_<?php echo $i; ?>" placeholder="jan.kowalski@gmail.com"
-                    value="<?php echo $guests[$i]->email; ?>">
-            </div>
-            <div class="elem-group">
-                <label for="guest_phone_<?php echo $i; ?>">Numer telefonu</label>
-                <input type="tel" name="guest_phone_<?php echo $i; ?>" placeholder="123256789"
-                    value="<?php echo $guests[$i]->phone; ?>">
-            </div>
             <hr>
         </div>
         </div>
