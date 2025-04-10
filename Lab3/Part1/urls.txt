@@ -1,0 +1,4 @@
+http://www.some-restaurant.com/ Strona główna
+http://www.some-restaurant.com/about O restauracji
+http://www.some-restaurant.com/menu Menu restauracji
+http://www.some-restaurant.com/contact Kontakt
