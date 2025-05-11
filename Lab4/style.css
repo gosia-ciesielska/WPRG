@@ -1,0 +1,105 @@
+body {
+  background: rgb(255,105,214);
+  background: linear-gradient(150deg, rgba(255,105,214,1) 0%, rgba(9,154,140,1) 61%, rgba(255,140,0,1) 100%);
+}
+
+.booking-form, .summary {
+  width: 600px;
+  margin: 0 auto;
+  padding: 50px;
+  background: #fff;
+  border-radius: 25px;
+}
+
+div.elem-group {
+  margin: 20px 0;
+}
+
+div.elem-group.inlined {
+  width: 49%;
+  display: inline-block;
+  float: left;
+  margin-left: 1%;
+}
+
+label {
+  display: block;
+  font-family: 'Open Sans';
+  padding-bottom: 10px;
+  font-size: 1.25em;
+}
+
+h1 {
+  display: block;
+  font-family: 'Open Sans';
+  font-size: 2em;
+  padding-bottom: 10px;
+}
+
+h2, p {
+  display: block;
+  font-family: 'Open Sans';
+  font-size: 1.4em;
+}
+
+h3 {
+  display: block;
+  font-family: 'Open Sans';
+  font-size: 1.6em;
+  font-weight: bold;
+}
+
+input, select, textarea {
+  border-radius: 2px;
+  border: 2px solid #777;
+  box-sizing: border-box;
+  font-size: 1.25em;
+  font-family: 'Open Sans';
+  width: 100%;
+  padding: 10px;
+}
+
+div.elem-group.inlined input {
+  width: 95%;
+  display: inline-block;
+}
+
+textarea {
+  height: 250px;
+}
+
+hr {
+  border: 1px dotted #ccc;
+}
+
+button {
+  height: 50px;
+  background: orange;
+  border: none;
+  color: white;
+  font-size: 1.25em;
+  font-family: 'Open Sans';
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 0 12px;
+}
+
+button:hover {
+  background: #333;
+}
+
+div.special-buttons {
+  display: flex;
+  flex-direction: row;
+}
+
+button.special {
+  margin: 5px;
+}
+
+.guest-data {
+  height: 250px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding: 20px;
+}

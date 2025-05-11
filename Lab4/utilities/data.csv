@@ -1,0 +1,10 @@
+"Liczba gości";"Dane gości";"Numer telefonu";E-mail;"Data zameldowania";"Data wymeldowania";"Łóżko dla dziecka";Klimatyzacja;"Pobyt ze zwierzęciem";Notatki
+2;"Gość 1: Jan Kowalski;Gość 2: Anna Nowak;";123456789;jan.k@gmail.com;2025-04-14;2025-05-10;Nie;Nie;Tak;Blllllllllllll
+1;"Adam Nowak";123456789;a.nowak@wp.pl;2025-05-27;2025-05-30;Nie;Nie;Tak;AAAAAAAA
+1;"Adam Nowak";123456789;a.nowak@wp.pl;2025-05-27;2025-05-30;Nie;Nie;Tak;AAAAAAAA
+2;"Gość 1: Jan Kowalski;Gość 2: Anna Nowak;";123456789;jan.k@gmail.com;2025-04-07;2025-04-21;Tak;Nie;Nie;
+1;"Jan Kowalski";123456789;jan.k@gmail.com;2025-05-07;2025-05-27;Nie;Nie;Tak;
+1;"Jan Kowalski";123456789;jan.k@gmail.com;2025-05-16;2025-05-21;Nie;Tak;Nie;
+2;"Gość 1: Jan Kowalski;Gość 2: Anna Nowak;";123456789;jan.k@gmail.com;2025-05-16;2025-05-21;Nie;Tak;Nie;
+2;"Gość 1: Jan Kowalski;Gość 2: Anna Nowak;";123456789;jan.k@gmail.com;2025-05-16;2025-05-21;Nie;Tak;Nie;
+1;"Anna Nowak";123456789;a.nowak@gmail.com;2025-05-28;2025-06-04;Nie;Nie;Tak;

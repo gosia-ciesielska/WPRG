@@ -1,0 +1,89 @@
+html {
+  margin: 0px;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  margin: 0px;
+  min-height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(255,105,214);
+  background: linear-gradient(150deg, rgba(255,105,214,1) 0%, rgba(9,154,140,1) 61%, rgba(255,140,0,1) 100%);
+}
+
+.login-form {
+  width: 600px;
+  margin: auto;
+  padding: 50px;
+  background: #fff;
+  border-radius: 25px;
+}
+
+div.elem-group {
+  margin: 20px 0;
+}
+
+label {
+  display: block;
+  font-family: 'Open Sans';
+  padding-bottom: 10px;
+  font-size: 1.25em;
+}
+
+h1 {
+  display: block;
+  font-family: 'Open Sans';
+  font-size: 2em;
+  padding-bottom: 10px;
+}
+
+h2, p {
+  display: block;
+  font-family: 'Open Sans';
+  font-size: 1.4em;
+}
+
+h3 {
+  display: block;
+  font-family: 'Open Sans';
+  font-size: 1.6em;
+  font-weight: bold;
+}
+
+input, select, textarea {
+  border-radius: 2px;
+  border: 2px solid #777;
+  box-sizing: border-box;
+  font-size: 1.25em;
+  font-family: 'Open Sans';
+  width: 100%;
+  padding: 10px;
+}
+
+textarea {
+  height: 250px;
+}
+
+hr {
+  border: 1px dotted #ccc;
+}
+
+button {
+  height: 50px;
+  background: orange;
+  border: none;
+  color: white;
+  font-size: 1.25em;
+  font-family: 'Open Sans';
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 0 12px;
+}
+
+button:hover {
+  background: #333;
+}
