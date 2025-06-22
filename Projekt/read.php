@@ -42,7 +42,7 @@ if ($post_id + 1 < sizeof($posts)) {
         if ($user != false && ($user->class == 'admin' || $user->class == 'author')) {
             echo "<div class='col-2 col-12-small'>";
             echo "<ul class='actions'>";
-            echo "<li><a href='/wprg/Projekt/edit.php?id='.$id class='button primary'>Edit</a></li>";
+            echo "<li><a href='/wprg/Projekt/edit.php?id=$id' class='button primary'>Edit</a></li>";
             echo "<li>";
             echo "<form method='post' action='#' onsubmit=\"return confirm('Are you sure you want to delete this post?');\">";
             echo "<input type='submit' name='submit' value='Delete' class='button primary'/>";
