@@ -14,8 +14,8 @@ class Data {
         }
     }
 
-    public function get_posts($start_index, $limit) {
-        $query = "SELECT * FROM post WHERE id >= ".$start_index." ORDER BY posted_on DESC LIMIT ".$limit;
+    public function get_posts() {
+        $query = "SELECT * FROM post ORDER BY posted_on DESC";
         $result = mysqli_query($this->dblink, $query);
         while ($row = mysqli_fetch_array($result)) {
             $posts[] = new Post($row['id'], htmlspecialchars($row['title']),
@@ -25,7 +25,7 @@ class Data {
     }
 
     public function get_post($id) {
-        $query = "SELECT * FROM post WHERE id = ".$id;
+        $query = "SELECT * FROM post WHERE id = $id";
         $result = mysqli_query($this->dblink, $query);
         $row = mysqli_fetch_array($result);
         if ($row == null) {
@@ -58,6 +58,39 @@ class Data {
         if (!mysqli_query($this->dblink, $query)) {
             echo "Failed to update database!";
         }
+    }
+
+    public function delete_post($id) {
+        $query = "DELETE FROM post WHERE id = $id";
+        if (!mysqli_query($this->dblink, $query)) {
+            echo "Failed to update database!";
+        }
+    }
+
+    public function get_user($login) {
+        $query = "SELECT * FROM user WHERE login = '$login'";
+        $result = mysqli_query($this->dblink, $query);
+        $row = mysqli_fetch_array($result);
+        if ($row == null) {
+            return false;
+        }
+        return new User($row['id'], htmlspecialchars($row['class']), htmlspecialchars($row['email']),
+         htmlspecialchars($row['login']), htmlspecialchars($row['password']));
+    }
+
+    public function add_user($class, $email, $login, $password) {
+        if ($this -> get_user($login) != false) {
+            return false;
+        }
+        $hash = password_hash($password, PASSWORD_DEFAULT);
+        $query = "INSERT INTO user (class, email, login, password) VALUES ('$class', '$email', '$login', '$hash')";
+        if (!mysqli_query($this->dblink, $query)) {
+            echo "Failed to update database!";
+        }
+    }
+
+    public function verify_password($user, $password) {
+        return password_verify($password, $user->password);
     }
 } 
 ?>

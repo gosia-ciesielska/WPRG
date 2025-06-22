@@ -1,7 +1,12 @@
 <?php
 include "header.php";
+if ($user == false || ($user->class != 'admin' && $user->class != 'author')) {
+    header("Location:index.php");
+    exit;
+}
 ob_start();
 ?>
+<br/>
 <h3>
     <?php
     if (!isset($_GET['id'])
@@ -39,8 +44,8 @@ ob_start();
 </form>
 <?php
 if (isset($_POST['title'])) {
-    $title = $_POST['title'];
-    $contents = $_POST['contents'];
+    $title = htmlspecialchars($_POST['title']);
+    $contents = htmlspecialchars($_POST['contents']);
     if ($is_edit) {
         $data->update_post($id, $title, $contents);
     } else {

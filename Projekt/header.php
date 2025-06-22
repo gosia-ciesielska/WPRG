@@ -1,7 +1,14 @@
 <?php 
 include_once "data.php";
 include_once "post.php";
+include_once "user.php";
+session_start();
 $data = new Data();
+$user = false;
+if (isset($_SESSION['login'])) {
+	$login = $_COOKIE['login'];
+	$user = $data->get_user($login);
+}
 ?>
 <!DOCTYPE HTML>
 <!--
@@ -22,8 +29,17 @@ $data = new Data();
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<!-- Section -->
-								<section>
-									<header class="major">
-										<h2>Blog</h2>
-									</header>
+							<header id="header">
+								<a href="index.php" class="logo"><strong>My Blog</strong></a>
+								<ul class="icons">
+									<li>
+										<?php
+										if ($user == false) {
+											echo "<a href='/wprg/Projekt/login.php'>Login</a>";
+										} else {
+											echo "<a href='/wprg/Projekt/logout.php'>Logout</a>";
+										}	
+										?>
+									</li>
+								</ul>
+							</header>
